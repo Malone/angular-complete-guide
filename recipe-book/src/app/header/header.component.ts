@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent{
     
+    @Output() selectedPartToOutside = new EventEmitter<{section: string}>();
+
+    selectPart(part){
+        this.selectedPartToOutside.emit({
+            section: part
+        });
+    }
 }
