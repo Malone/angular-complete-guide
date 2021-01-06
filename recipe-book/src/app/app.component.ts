@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe-book';
-  public partMain: string = 'recipe'; 
-
-  choosePart(eventData: {section: string}){
-    this.partMain = eventData.section;
-  }
 }
